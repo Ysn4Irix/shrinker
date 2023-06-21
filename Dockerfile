@@ -1,14 +1,12 @@
 FROM --platform=arm64 node:18-alpine
 ARG PUBLIC_POCKETBASE_URL=${PUBLIC_POCKETBASE_URL}
 ENV PUBLIC_POCKETBASE_URL=${PUBLIC_POCKETBASE_URL}
-ARG BASE_URL=${BASE_URL}
-ENV BASE_URL=${BASE_URL}
 WORKDIR /app
 COPY package.json ./
 RUN npm install
 COPY . .
 RUN npm run build && npm prune --production
 ENV PORT 80
-ENV ORIGIN BASE_URL
+ENV ORIGIN https://shrinker.ysnirix.live
 EXPOSE 80
 CMD ["node", "build"]
