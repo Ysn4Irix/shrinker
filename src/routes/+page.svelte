@@ -328,7 +328,7 @@
 													class="inline-flex flex-shrink-0 items-center justify-center gap-x-2.5 rounded-md border bg-white px-2.5 align-middle text-xs font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-slate-700 dark:hover:text-white dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
 												>
 													<Clipboard
-														text={form?.data?.shortLink}
+														text={form?.shortLink}
 														let:copy
 														on:copy={() => toast.success('Copied to clipboard')}
 													>
@@ -338,7 +338,7 @@
 															href="#!"
 															on:click={copy}
 														>
-															{form?.data?.shortLink}
+															{form?.shortLink}
 														</a>
 													</Clipboard>
 
