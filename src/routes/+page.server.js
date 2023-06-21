@@ -4,7 +4,7 @@ import { getShortLink, serializeNonPOJOs, validateData } from '$lib/utils'
 import { linkSchema } from '$lib/schemas'
 
 /** @type {import('@sveltejs/kit').Load} */
-export const load = async ({ locals }) => {
+export const load = async ({ locals, url }) => {
 	if (!locals.pb.authStore.isValid) {
 		throw redirect(303, '/auth/login')
 	}
@@ -17,7 +17,8 @@ export const load = async ({ locals }) => {
 		})
 
 		return {
-			links: serializeNonPOJOs(links)
+			links: serializeNonPOJOs(links),
+			origin: url.origin
 		}
 	} catch (err) {
 		console.log('🚀 ~ file: +page.server.js:18 ~ load ~ err:', err)

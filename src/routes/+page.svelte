@@ -3,6 +3,7 @@
 	import { fly } from 'svelte/transition'
 	import Card from '$lib/components/Card.svelte'
 	import { Icon, Trash } from 'svelte-hero-icons'
+	import { getShortLink } from '$lib/utils'
 	import SettingInput from '$lib/components/SettingInput.svelte'
 	import toast from 'svelte-french-toast'
 	import Clipboard from 'svelte-clipboard'
@@ -16,7 +17,7 @@
 
 	let itemsPerPage = 4
 
-	$: ({ links } = data)
+	$: ({ links, origin } = data)
 
 	const submitCreateShortLink = () => {
 		loading = true
@@ -328,7 +329,7 @@
 													class="inline-flex flex-shrink-0 items-center justify-center gap-x-2.5 rounded-md border bg-white px-2.5 align-middle text-xs font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-slate-700 dark:hover:text-white dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
 												>
 													<Clipboard
-														text={form?.shortLink}
+														text={getShortLink(row.shortSlug, origin)}
 														let:copy
 														on:copy={() => toast.success('Copied to clipboard')}
 													>
@@ -338,7 +339,7 @@
 															href="#!"
 															on:click={copy}
 														>
-															{form?.shortLink}
+															{getShortLink(row.shortSlug, origin)}
 														</a>
 													</Clipboard>
 
