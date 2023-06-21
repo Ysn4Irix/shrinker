@@ -5,6 +5,7 @@
 
 {#each providers.authProviders as provider}
 	<a
+		class:disabled={provider.name === 'google'}
 		class="m-1 inline-flex w-full items-center justify-center gap-2 rounded-md border bg-white px-4 py-3 align-middle text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-slate-800 dark:hover:text-white dark:focus:ring-offset-gray-800"
 		href={`/oauth?provider=${provider.name}`}
 	>
