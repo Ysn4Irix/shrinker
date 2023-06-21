@@ -1,0 +1,69 @@
+{
+	"name": "shrinker",
+	"version": "1.0.0",
+	"description": "A full stack URL shortener web application with user authentication built with SvelteKit and PocketBase as a BaaS.",
+	"private": true,
+	"author": {
+		"name": "Ysn4Irix",
+		"email": "ysn4irix@gmail.com",
+		"url": "https://ysnirix.live"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Ysn4Irix/shrinker.git"
+	},
+	"keywords": [
+		"javascript",
+		"svelte",
+		"sveltekit",
+		"sveltejs",
+		"pocketbase",
+		"tailwindcss",
+		"preline-ui",
+		"url-shortener"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "git+https://github.com/Ysn4Irix/shrinker/issues"
+	},
+	"homepage": "https://github.com/Ysn4Irix/shrinker#readme",
+	"scripts": {
+		"dev": "vite dev --host",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "prettier --plugin-search-dir . --check .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"dependencies": {
+		"pocketbase": "^0.15.0"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-node": "^1.2.4",
+		"@sveltejs/kit": "^1.5.0",
+		"@tailwindcss/forms": "^0.5.3",
+		"@upstash/ratelimit": "^0.4.3",
+		"@upstash/redis": "^1.21.0",
+		"autoprefixer": "^10.4.14",
+		"express-rate-limit": "^6.7.0",
+		"nanoid": "^4.0.2",
+		"object-to-formdata": "^4.5.1",
+		"postcss": "^8.4.23",
+		"postcss-load-config": "^4.0.1",
+		"preline": "^1.8.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.10.1",
+		"prettier-plugin-tailwindcss": "^0.3.0",
+		"svelte": "^3.54.0",
+		"svelte-clipboard": "^1.0.0",
+		"svelte-french-toast": "^1.0.4-beta.0",
+		"svelte-hero-icons": "^5.0.0",
+		"svelte-preprocess": "^5.0.3",
+		"tailwindcss": "^3.3.1",
+		"vite": "^4.3.0",
+		"zod": "^3.21.4"
+	},
+	"engines": {
+		"node": ">=17.0.0"
+	},
+	"type": "module"
+}
