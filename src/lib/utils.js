@@ -58,7 +58,7 @@ export const validateData = async (formData, schema) => {
  * @return {string} full short link
  */
 export const getShortLink = (shortLink, origin) => {
-	return `${
-		process.env.NODE_ENV === 'development' ? 'http://localhost:5173' : origin
-	}/$/${shortLink}`
+	return process.env.NODE_ENV === 'development'
+		? 'http://localhost:5173'
+		: `${origin}/$/${shortLink}`
 }
