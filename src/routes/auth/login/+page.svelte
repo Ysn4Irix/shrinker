@@ -3,7 +3,6 @@
 	import Input from '$lib/components/Input.svelte'
 	import Auth from '$lib/components/Auth.svelte'
 	import toast from 'svelte-french-toast'
-	import { invalidateAll } from '$app/navigation'
 
 	/** @type {import('./$types').ActionData} */
 	/** @type {import('./$types').PageData} */
@@ -15,10 +14,10 @@
 
 	const submitLogin = () => {
 		loading = true
-		return async ({ result }) => {
+		return async ({ result, update }) => {
 			switch (result.type) {
 				case 'success':
-					await invalidateAll()
+					await update()
 					break
 				case 'error':
 					toast.error(result.error.message)
