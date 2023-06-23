@@ -24,9 +24,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          name: Release ${{ github.ref.replace('refs/tags/', '') }}
+          name: Release ${{ github.ref }}
           tag_name: ${{ github.ref }}
           body: |
-            Source code zip file for release ${{ github.ref.replace('refs/tags/', '') }}
+            Source code zip file for release ${{ github.ref }}
           draft: false
           prerelease: false
