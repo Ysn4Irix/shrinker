@@ -1,6 +1,6 @@
 {
 	"name": "shrinker",
-	"version": "1.0.0",
+	"version": "1.0.9",
 	"description": "A full stack URL shortener web application with user authentication built with SvelteKit and PocketBase as a BaaS.",
 	"private": true,
 	"author": {
