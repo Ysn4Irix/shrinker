@@ -7,6 +7,6 @@ RUN npm install
 COPY . .
 RUN npm run build && npm prune --production
 ENV PORT 80
-ENV ORIGIN https://shrinker.ysnirix.live
+ENV ORIGIN https://shrinker.ysnirix.xyz
 EXPOSE 80
 CMD ["node", "build"]
