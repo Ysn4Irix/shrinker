@@ -58,7 +58,7 @@
 
 ## ❯ Getting Started
 
-Live demonstration of the application available [Here](https://shrinker.ysnirix.live/)
+Live demonstration of the application available [Here](https://shrinker.ysnirix.xyz/)
 
 - Download the [latest version of Pocketbase](https://pocketbase.io/docs/) and run the executable with `./pocketbase serve` or deploy it to a cloud provider
 - Import collections from `pocketbase-collections.json` to your pocketbase instance found in this link: [http://localhost:8090/\_/?#/settings/import-collections](http://localhost:8090/_/?#/settings/import-collections).
