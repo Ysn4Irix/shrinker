@@ -7,7 +7,7 @@ export const GET = async ({ locals, params }) => {
 		link = await locals.pb.collection('links').getFirstListItem(`shortSlug="${params.shortSlug}"`)
 
 		if (link) {
-			if (parseInt(link.expiration) > Date.now()) {
+			if (parseInt(link.expiration) > Date.now() || link.expiration === 'Infinity') {
 				await locals.pb.collection('links').update(link.id, {
 					views: link.views + 1
 				})
